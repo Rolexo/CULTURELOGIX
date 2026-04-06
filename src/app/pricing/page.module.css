@@ -1,0 +1,196 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  min-height: calc(100vh - 70px);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin-bottom: var(--spacing-md);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-2xl);
+}
+
+.toggleLabel {
+  font-weight: 500;
+  color: var(--color-text-main);
+}
+
+.toggleLabel.active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.toggle {
+  width: 60px;
+  height: 32px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  position: relative;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.toggleIndicator {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  transition: transform var(--transition-normal);
+}
+
+.toggle.yearly .toggleIndicator {
+  transform: translateX(28px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-2xl);
+  align-items: center;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card.popular {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: scale(1.02);
+}
+
+.popularBadge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-primary);
+  color: white;
+  padding: 4px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-main);
+}
+
+.cardDesc {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--spacing-xl);
+  min-height: 48px;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.featuresList {
+  list-style: none;
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-main);
+  font-size: 1.05rem;
+}
+
+.featureIcon {
+  color: var(--color-success);
+  flex-shrink: 0;
+}
+
+.featureIcon.missing {
+  color: var(--color-text-muted);
+  opacity: 0.5;
+}
+
+.btnAction {
+  width: 100%;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.btnPrimary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btnPrimary:hover {
+  background-color: var(--color-primary-light);
+}
+
+.btnSecondary {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btnSecondary:hover {
+  background-color: var(--color-surface);
+}
+
+@media (max-width: 900px) {
+  .card.popular {
+    transform: scale(1);
+  }
+}
