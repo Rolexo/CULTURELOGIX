@@ -1,6 +1,6 @@
 'use client';
 
-import { Users, Building2, CreditCard, ActiveActivity, TrendingUp } from 'lucide-react';
+import { Users, Building2, CreditCard } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import styles from './page.module.css';
 
