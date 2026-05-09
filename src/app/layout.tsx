@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Syne } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${syne.variable}`}>
+        <Script src="https://js.paystack.co/v1/inline.js" strategy="beforeInteractive" />
         {/* We will add a ThemeProvider here later for dark/light mode */}
         <div className="app-wrapper">
           <Navbar />
